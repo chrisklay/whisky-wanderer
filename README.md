@@ -1,5 +1,5 @@
 # README
-
+[![Codeship Status for chrisklay/the-whisky-wanderer](https://app.codeship.com/projects/44d452e0-95d7-0137-99ed-2abd3a2449bb/status?branch=master)](https://app.codeship.com/projects/357276)
 Whiskey Rating App:
 
 - The purpose of this site is to allow visitors to learn more about Scotch whisky.
