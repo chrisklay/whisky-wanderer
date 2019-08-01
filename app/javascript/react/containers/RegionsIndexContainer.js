@@ -36,6 +36,7 @@ render(){
         key={region.id}
         id={region.id}
         name={region.name}
+        code={region.code}
         description={region.description}
         svg={region.svg}
         />
