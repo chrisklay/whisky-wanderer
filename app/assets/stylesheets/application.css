@@ -23,3 +23,22 @@
   margin: 1em;
   max-width: 667px;
 }
+
+.region-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scotland {
+  padding-top: 50px;
+}
+
+.region {
+ fill: #384634;
+}
+
+.region a:hover {
+ fill: #E58552;
+}
