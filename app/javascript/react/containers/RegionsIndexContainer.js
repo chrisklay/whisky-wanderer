@@ -24,7 +24,6 @@ class RegionsIndexContainer extends Component {
   })
   .then(response => response.json())
   .then(regions => {
-    console.log(regions)
     this.setState({ regions: regions })
   })
   .catch(error => console.error(`Error in fetch: ${error.message}`));
