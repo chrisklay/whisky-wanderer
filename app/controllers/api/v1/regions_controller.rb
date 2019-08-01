@@ -4,6 +4,6 @@ class Api::V1::RegionsController < ApplicationController
   end
 
   def show
-    render json: Region.find(params[:description])
+    render json: Region.find(params[:id])
   end
 end

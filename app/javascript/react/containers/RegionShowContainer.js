@@ -10,8 +10,7 @@ class RegionShowContainer extends Component {
     }
 
     componentDidMount(){
-      let regionName = this.props.match.params.description
-
+      let regionName = this.props.match.params.id
       fetch(`/api/v1/regions/${regionName}`)
         .then(response => {
           if(response.ok){
@@ -24,7 +23,7 @@ class RegionShowContainer extends Component {
         })
         .then(response => response.json())
         .then(regionHash => {
-          this.setState({ regionObject: regionHash.name })
+          this.setState({ regionObject: regionHash })
         })
         .catch(error => console.error(`Error in fetch: ${error.message}`));
     }
@@ -32,7 +31,6 @@ class RegionShowContainer extends Component {
     render(){
       return(
         <div>
-          {this.state.regionObject}
           <Link to={`/`}>
             <div>Back</div>
           </Link>
