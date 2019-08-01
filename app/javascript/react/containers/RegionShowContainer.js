@@ -22,19 +22,20 @@ class RegionShowContainer extends Component {
           }
         })
         .then(response => response.json())
-        .then(regionHash => {
-          this.setState({ regionObject: regionHash })
+        .then(region => {
+          this.setState({ regionObject: region })
         })
         .catch(error => console.error(`Error in fetch: ${error.message}`));
     }
 
     render(){
       return(
-        <div>
+        <div><center>
+          <div>{this.state.regionObject.name} is {this.state.regionObject.description}</div>
           <Link to={`/`}>
             <div>Back</div>
           </Link>
-        </div>
+        </center></div>
       )
     }
 }
