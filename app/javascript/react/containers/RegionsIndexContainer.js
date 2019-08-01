@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
 import RegionTile from '../components/RegionTile'
-// import scotlandSvg from './../../../assets/images/svg/Scotland.svg');
+require('../../../assets/images/svg/Scotland.svg');
 
 class RegionsIndexContainer extends Component {
   constructor(props) {
@@ -24,6 +24,7 @@ class RegionsIndexContainer extends Component {
   })
   .then(response => response.json())
   .then(regions => {
+    console.log(regions)
     this.setState({ regions: regions })
   })
   .catch(error => console.error(`Error in fetch: ${error.message}`));
@@ -36,6 +37,7 @@ render(){
         key={region.id}
         id={region.id}
         name={region.name}
+        code={region.code}
         description={region.description}
         svg={region.svg}
         />
@@ -45,9 +47,17 @@ render(){
     <section className="region-container">
       <h1 className="title">Map of Scotland</h1>
       <p>Select a region:</p>
-      <div className="scotland">
-        {scotland}
-      </div>
+      <svg baseProfile="tiny" fill="#7c7c7c" height="1870" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" version="1.2" viewBox="0 0 1000 1870" width="1000" xmlns="http://www.w3.org/2000/svg">
+        <g className="region">
+          {scotland}
+        </g>
+        <circle cx="732.9" cy="1494.1" id="0">
+        </circle>
+        <circle cx="635.2" cy="596.3" id="1">
+        </circle>
+        <circle cx="835.7" cy="1614.6" id="2">
+        </circle>
+      </svg>
     </section>
   )
   }

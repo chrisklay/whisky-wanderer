@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_07_31_205644) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "code", null: false
     t.string "description", null: false
     t.text "svg", null: false
   end
