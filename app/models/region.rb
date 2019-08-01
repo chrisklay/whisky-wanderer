@@ -3,5 +3,4 @@ class Region < ApplicationRecord
   validates :description, presence: true
   validates :svg, presence: true
 
-  REGIONS = ["Campbeltown","Islands","Islay","Highlands","Lowland","Speyside"]
 end
