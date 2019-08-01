@@ -43,14 +43,10 @@ render(){
     })
   return(
     <section className="region-container">
-      <h1 className="title">Whisky Wanderer</h1>
+      <h1 className="title">Map of Scotland</h1>
       <p>Select a region:</p>
       <div className="scotland">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1870">
-        <g className="region">
-          {scotland}
-        </g>
-        </svg>
+        {scotland}
       </div>
     </section>
   )

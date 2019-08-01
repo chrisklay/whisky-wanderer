@@ -4,11 +4,9 @@ import { Link } from "react-router-dom"
 const RegionTile = props => {
   return(
     <div>
-    <a href={`/regions/${props.id}`}>
-      <path name={props.name} d={props.svg}>
-        <title>{props.name}</title>
-      </path>
-    </a>
+      <Link to={`/regions/${props.description}`}>
+        {props.name}
+      </Link>
     </div>
   )
 }
