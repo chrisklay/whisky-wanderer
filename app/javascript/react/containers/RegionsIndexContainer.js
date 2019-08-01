@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
 import RegionTile from '../components/RegionTile'
-require('../../../assets/Scotland.svg');
+// import scotlandSvg from './../../../assets/images/svg/Scotland.svg');
 
 class RegionsIndexContainer extends Component {
   constructor(props) {
