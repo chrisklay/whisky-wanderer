@@ -15,6 +15,12 @@
  *= require foundation_and_overrides
 
  */
+.background{
+  background-color: white;
+  background-image: url("Flag_of_Scotland.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 .form {
   background-color: #F7DEEB;
   border-radius: 0.8em;
@@ -22,4 +28,19 @@
   padding: 1em;
   margin: 1em;
   max-width: 667px;
+}
+
+.region-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.region a, .region a:visited {
+ fill: #2A724E;
+}
+
+.region a:hover {
+ fill: #01002E;
 }
