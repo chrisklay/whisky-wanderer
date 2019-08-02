@@ -31,14 +31,10 @@
   flex-direction: column;
 }
 
-.scotland {
-  padding-top: 50px;
-}
-
-.region {
- fill: #384634;
+.region a, .region a:visited {
+ fill: #2A724E;
 }
 
 .region a:hover {
- fill: #E58552;
+ fill: #01002E;
 }

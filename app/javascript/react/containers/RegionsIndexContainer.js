@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
 import RegionTile from '../components/RegionTile'
-require('../../../assets/Scotland.svg');
 
 class RegionsIndexContainer extends Component {
   constructor(props) {
@@ -24,6 +23,7 @@ class RegionsIndexContainer extends Component {
   })
   .then(response => response.json())
   .then(regions => {
+    console.log(regions)
     this.setState({ regions: regions })
   })
   .catch(error => console.error(`Error in fetch: ${error.message}`));
@@ -45,10 +45,11 @@ render(){
   return(
     <section className="region-container">
       <h1 className="title">Map of Scotland</h1>
-      <p>Select a region:</p>
-      <div className="scotland">
-        {scotland}
-      </div>
+      <svg baseProfile="tiny" fill="#7c7c7c" height="1500" stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" version="1.2" viewBox="0 0 1000 1000" width="1000" xmlns="http://www.w3.org/2000/svg">
+        <g className="region">
+          {scotland}
+        </g>
+      </svg>
     </section>
   )
   }
