@@ -15,14 +15,23 @@
  *= require foundation_and_overrides
 
  */
-.background{
-  background-color: white;
-  background-image: url("Flag_of_Scotland.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+ .title {
+   color: white;
+ }
+
+ .box {
+   opacity: 1000;
+ }
+
+ .background {
+   background-color: #deebf6;
+   background-image: url('Scotland.jpg') ;
+   background-repeat: no-repeat;
+   background-size: 175% 175%;
+ }
+
 .form {
-  background-color: #F7DEEB;
+  background-color: #f7deeb;
   border-radius: 0.8em;
   color: #000000;
   padding: 1em;
@@ -38,9 +47,9 @@
 }
 
 .region a, .region a:visited {
- fill: #2A724E;
+ fill: #def6e9;
 }
 
 .region a:hover {
- fill: #01002E;
+ fill: #e9def6;
 }
