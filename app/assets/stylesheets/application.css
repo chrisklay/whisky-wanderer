@@ -15,6 +15,7 @@
  *= require foundation_and_overrides
 
  */
+<<<<<<< HEAD
  .title {
    color: white;
  }
@@ -30,6 +31,14 @@
    background-size: 175% 175%;
  }
 
+=======
+.background{
+  background-color: white;
+  background-image: url("Flag_of_Scotland.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+>>>>>>> master
 .form {
   background-color: #f7deeb;
   border-radius: 0.8em;
