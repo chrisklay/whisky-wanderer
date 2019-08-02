@@ -30,12 +30,14 @@ class RegionShowContainer extends Component {
 
     render(){
       return(
-        <div><center>
-          <div>{this.state.regionObject.name} is {this.state.regionObject.description}</div>
+        <center>
+        <div className="form">
+          <div>{this.state.regionObject.name} is part of the {this.state.regionObject.description} Whisky Region</div>
           <Link to={`/`}>
             <div>Back</div>
           </Link>
-        </center></div>
+        </div>
+        </center>
       )
     }
 }

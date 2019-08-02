@@ -44,7 +44,7 @@ render(){
   return(
     <section className="region-container">
       <h1 className="title">Map of Scotland</h1>
-      <svg baseProfile="tiny" fill="#7c7c7c" height="1000" stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" version="1.2" viewBox="-125 270 1000 1000" width="1000" xmlns="http://www.w3.org/2000/svg">
+      <svg className="box" baseProfile="tiny" fill="#7c7c7c" height="1000" stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" version="1.2" viewBox="-125 270 1000 1000" width="1000" xmlns="http://www.w3.org/2000/svg">
         <g className="region">
           {scotland}
         </g>
