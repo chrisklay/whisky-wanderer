@@ -15,9 +15,6 @@
  *= require foundation_and_overrides
 
  */
- .title {
-   color: white;
- }
 
  .box {
    opacity: 1000;
@@ -25,9 +22,7 @@
 
  .background {
    background-color: #deebf6;
-   background-image: url('Scotland.jpg') ;
    background-repeat: no-repeat;
-   background-size: 175% 175%;
  }
 
 .form {
