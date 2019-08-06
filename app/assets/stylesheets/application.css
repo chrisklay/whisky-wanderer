@@ -63,13 +63,20 @@
 }
 
 .region a, .region a:visited {
- fill: #297E7C;
+ fill: #608229;
 }
 
 .region a:hover {
- fill: #ff631c;
+ fill: #344E3B;
 }
 
-.text {
-  color: #563435;
+h2, .text, .field {
+  font-family: "Luminari";
+  color: #50270C;
+}
+
+.top-bar, .top-bar-section li:not(.has-form) a:not(.button),
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  font-family: "Luminari";
+  background-color: #50270C;
 }
