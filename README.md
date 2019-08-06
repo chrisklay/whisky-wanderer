@@ -1,4 +1,4 @@
-# The Whisky Wander
+# The Whisky Wanderer
 
 [![Codeship Status for chrisklay/the-whisky-wanderer](https://app.codeship.com/projects/44d452e0-95d7-0137-99ed-2abd3a2449bb/status?branch=master)](https://app.codeship.com/projects/357276)
 
