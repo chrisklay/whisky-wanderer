@@ -1,19 +1,15 @@
-# README
+# The Whisky Wander
+
 [![Codeship Status for chrisklay/the-whisky-wanderer](https://app.codeship.com/projects/44d452e0-95d7-0137-99ed-2abd3a2449bb/status?branch=master)](https://app.codeship.com/projects/357276)
-Whiskey Rating App:
 
-- The purpose of this site is to allow visitors to learn more about Scotch whisky.
+Created by: Chris Lay (https://github.com/chrisklay)
 
-- The homepage will be a map of Scotland where specific regions are clickable.
+The aim of this project is to provide a place where whisky novices and enthusiasts to everyone in between can learn a little bit more about whisky and Scotland. This application utilizes a Rails back-end with a React front-end, emphasizing heavily on a smooth UI experience.
 
-- Clicking on a specific region will bring them to that region's page where more information can be read.
+Features:
 
-- On the region page are links to most famous whisky distilleries from that region.
+* Interactive Map of Scotland
+* A council region page with information about that region and about the whisky region that is part of through an external API call to Wikipedia
+* A place on the page for a visitor to add a comment on the region through a form on the page
 
-- Clicking on the link will bring them to that distillery's site.
-
-- On that region specific page, there is a whisky review forum that can be accessed by anyone.
-
-- Authorized admins can post new whisky reviews to be read.
-
-- Authorized users can post comments on whisky reviews.
+Live Deployment: https://whiskywanderer.herokuapp.com/
