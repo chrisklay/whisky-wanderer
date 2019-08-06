@@ -16,6 +16,14 @@
 
  */
 
+ .button {
+  background-color: #c0c0c0;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
  .box {
    opacity: 1000;
  }
@@ -26,12 +34,25 @@
  }
 
 .form {
-  background-color: #f7deeb;
+  background-color: #a9cbca;
   border-radius: 0.8em;
   color: #000000;
   padding: 1em;
   margin: 1em;
   max-width: 667px;
+}
+
+.info {
+  background-color: #a9cbca;
+  border-radius: 0.8em;
+  color: #000000;
+  padding: 1em;
+  margin: 1em;
+}
+
+.link {
+  color: #563435;
+  font-size: 20px;
 }
 
 .region-container {
@@ -42,9 +63,13 @@
 }
 
 .region a, .region a:visited {
- fill: #def6e9;
+ fill: #297E7C;
 }
 
 .region a:hover {
- fill: #e9def6;
+ fill: #ff631c;
+}
+
+.text {
+  color: #563435;
 }

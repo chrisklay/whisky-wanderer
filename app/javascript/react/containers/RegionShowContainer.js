@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
+import WhiskyRegionsContainer from './WhiskyRegionsContainer'
 
 class RegionShowContainer extends Component {
     constructor(props) {
@@ -29,15 +30,22 @@ class RegionShowContainer extends Component {
     }
 
     render(){
+      console.log(this.state.regionObject)
       return(
+
+        <div className="info">
+
+        <Link className="button" to={`/`}>
+          <div className="link">Back</div>
+        </Link>
+
         <center>
-        <div className="form">
-          <div>The {this.state.regionObject.name} council area is part of the {this.state.regionObject.description} Whisky Region</div>
-          <Link to={`/`}>
-            <div>Back</div>
-          </Link>
-        </div>
+        <WhiskyRegionsContainer
+          region={this.state.regionObject}
+        />
         </center>
+        </div>
+
       )
     }
 }
