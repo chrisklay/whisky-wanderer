@@ -1,13 +1,15 @@
 import React, { Component } from "react"
 import WhiskyRegionTile from '../components/WhiskyRegionTile'
-
+import FormCommentContainer from './FormCommentContainer'
 
 class WhiskyRegionsContainer extends Component {
     constructor(props) {
       super(props)
       this.state = {
-        whiskyRegionObject: []
+        whiskyRegionObject: [],
+        commentsObject: []
       }
+      this.addNewComment = this.addNewComment.bind(this)
     }
 
     componentDidMount(){
@@ -34,6 +36,34 @@ class WhiskyRegionsContainer extends Component {
         .catch(error => console.error(`Error in fetch: ${error.message}`));
     }
 
+    addNewComment(formPayload) {
+      let regionID = this.props.match.params.id
+      let fetchUrl = `/api/v1/regions/${regionID}/comments`
+      fetch(`${fetchUrl}`, {
+        credentials: 'same-origin',
+        method: 'POST',
+        headers: {
+           'Accept': 'application/json',
+           'Content-Type': 'application/json'
+         },
+        body: JSON.stringify(formPayload)
+      })
+        .then(response => {
+          if (response.ok) {
+            return response;
+          } else {
+            let errorMessage = `${response.status} (${response.statusText})`,
+             error = new Error(errorMessage);
+            throw(error);
+          }
+        })
+        .then(response => response.json())
+        .then(commentsHash => {
+          this.setState({ commentsObject: commentsHash.region })
+        })
+        .catch(error => console.error(`Error in fetch: ${error.message}`));
+      }
+
     render(){
       let regionsTiles = this.state.whiskyRegionObject.map (region => {
         if (region.title.includes(this.props.region.description)) {
@@ -46,12 +76,33 @@ class WhiskyRegionsContainer extends Component {
              />
           )
         }
+        else {
+          var multiRegions = this.props.region.description.split(", ")
+          multiRegions.map(whiskyRegion => {
+            if (region.title.includes(whiskyRegion)){
+              console.log("hello")
+                return(
+                  <WhiskyRegionTile
+                  key={region.pageid}
+                  id={region.pageid}
+                  title={whiskyRegion}
+                  description={region.extract}
+                   />
+                )
+              }
+          })
+        }
       })
       return(
         <div className="text">
           <h2>The Council Area: {this.props.region.name}</h2>
           <br></br>
           <div>{regionsTiles}</div>
+          <div>
+          <FormCommentContainer
+            region={this.props.region}
+          />
+          </div>
         </div>
       )
     }

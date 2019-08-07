@@ -30,7 +30,6 @@ class RegionShowContainer extends Component {
     }
 
     render(){
-      console.log(this.state.regionObject)
       return(
 
         <div className="info">
