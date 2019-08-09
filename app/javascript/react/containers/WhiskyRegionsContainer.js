@@ -46,21 +46,6 @@ class WhiskyRegionsContainer extends Component {
              />
           )
         }
-        // else {
-        //   var multiRegions = this.props.region.description.split(", ")
-        //   multiRegions.map(whiskyRegion => {
-        //     if (region.title.includes(whiskyRegion)){
-        //         return(
-        //           <WhiskyRegionTile
-        //           key={region.pageid}
-        //           id={region.pageid}
-        //           title={whiskyRegion}
-        //           description={region.extract}
-        //            />
-        //         )
-        //       }
-        //   })
-        // }
       })
 
       return(

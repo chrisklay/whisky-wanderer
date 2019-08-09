@@ -6,7 +6,7 @@ const CommentTile = props => {
   let time = props.comment.created_at.slice(11, 19)
   return(
     <div className="comment">
-      <p><u>Posted at: {date} {time}</u></p>
+      <p><u>Posted at: {date} {time}</u> </p> 
       <p>{props.comment.description} </p>
     </div>
   )

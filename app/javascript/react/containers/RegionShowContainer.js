@@ -1,17 +1,14 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import WhiskyRegionsContainer from './WhiskyRegionsContainer'
-import CommentTile from '../components/CommentTile'
-
+import CommentShowContainer from './CommentShowContainer'
 
 class RegionShowContainer extends Component {
     constructor(props) {
       super(props)
       this.state = {
-        regionObject: {},
-        commentsObject: []
+        regionObject: {}
       }
-      this.addNewComment = this.addNewComment.bind(this)
     }
 
     componentDidMount(){
@@ -60,18 +57,7 @@ class RegionShowContainer extends Component {
         .catch(error => console.error(`Error in fetch: ${error.message}`));
       }
 
-
     render(){
-      let comments = this.state.commentsObject.map(comment => {
-        return(
-          <CommentTile
-            key={comment.id}
-            id={comment.id}
-            comment={comment}
-          />
-        )
-      })
-
       return(
         <div className="info">
 
@@ -87,7 +73,9 @@ class RegionShowContainer extends Component {
           addNewComment={this.addNewComment}
         />
         </center>
-        {comments}
+        <CommentShowContainer
+          region={this.props.match.params.id}
+        />
         </div>
 
       )
