@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import WhiskyRegionTile from '../components/WhiskyRegionTile'
-import FormCommentContainer from './FormCommentContainer'
 
 class WhiskyRegionsContainer extends Component {
     constructor(props) {
@@ -47,16 +46,9 @@ class WhiskyRegionsContainer extends Component {
           )
         }
       })
-
       return(
         <div className="text">
           <div>{regionsTiles}</div>
-          <div>
-          <FormCommentContainer
-            region={this.props.region}
-            addNewComment={this.props.addNewComment}
-          />
-          </div>
         </div>
       )
     }

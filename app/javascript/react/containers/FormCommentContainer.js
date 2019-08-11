@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FormCommentField from '../components/FormCommentField'
 
-class FormContainer extends Component {
+class FormCommentContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -82,4 +82,4 @@ class FormContainer extends Component {
 
 }
 
-export default FormContainer
+export default FormCommentContainer

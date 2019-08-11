@@ -30,33 +30,6 @@ class RegionShowContainer extends Component {
         .catch(error => console.error(`Error in fetch: ${error.message}`));
     }
 
-    addNewComment(formPayload) {
-      let regionName = this.props.match.params.id
-      fetch(`/api/v1/regions/${regionName}/comments`, {
-        method: 'POST',
-        body: JSON.stringify(formPayload),
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
-      })
-        .then(response => {
-          if (response.ok) {
-            return response;
-          } else {
-            let errorMessage = `${response.status} (${response.statusText})`,
-             error = new Error(errorMessage);
-            throw(error);
-          }
-        })
-        .then(response => response.json())
-        .then(comment => {
-          let allComments = this.state.commentsObject
-          this.setState({ commentsObject: allComments.concat(comment) })
-        })
-        .catch(error => console.error(`Error in fetch: ${error.message}`));
-      }
-
     render(){
       return(
         <div className="info">
@@ -75,6 +48,7 @@ class RegionShowContainer extends Component {
         </center>
         <CommentShowContainer
           region={this.props.match.params.id}
+          comment={this.state.commentsObject}
         />
         </div>
 
