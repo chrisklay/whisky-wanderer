@@ -4,7 +4,7 @@
 
 Created by: Chris Lay (https://github.com/chrisklay)
 
-The aim of this project is to provide a place where whisky novices and enthusiasts to everyone in between can learn a little bit more about whisky and Scotland. This application utilizes a Rails back-end with a React front-end, emphasizing heavily on a smooth UI experience.
+The aim of this project is to provide a place where whisky novices and enthusiasts to everyone in between can learn a little bit more about whisky and Scotland. This application utilizes a Rails back-end with a React front-end.
 
 Features:
 
